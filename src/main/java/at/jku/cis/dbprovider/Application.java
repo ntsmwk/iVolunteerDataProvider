@@ -20,9 +20,9 @@ public class Application {
 		SpringApplication.run(Application.class, args);
 	}
 
-	@PostConstruct
-	public void init() {
-		Person person = new Person("asdf", "asfdasfd", "asdfasdf", "asdfasdf", "asdf", new ContactDetail[] {new ContactDetail()}, "asdfasf");
-		personRepository.save(person);
-	}
+//	@PostConstruct
+//	public void init() {
+//		Person person = new Person("asdf", "asfdasfd", "asdfasdf", "asdfasdf", "asdf", new ContactDetail[] {new ContactDetail()}, "asdfasf");
+//		personRepository.save(person);
+//	}
 }
