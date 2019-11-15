@@ -17,9 +17,10 @@ public class PersonRole {
 	private String dateFrom;
 	private String dateTo;
 	private String iVolunteerSource;
+	
+	private String personID;
 
 	public PersonRole() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public String getRoleID() {
@@ -100,6 +101,14 @@ public class PersonRole {
 
 	public void setiVolunteerSource(String iVolunteerSource) {
 		this.iVolunteerSource = iVolunteerSource;
+	}
+
+	public String getPersonID() {
+		return personID;
+	}
+
+	public void setPersonID(String personID) {
+		this.personID = personID;
 	}
 
 }

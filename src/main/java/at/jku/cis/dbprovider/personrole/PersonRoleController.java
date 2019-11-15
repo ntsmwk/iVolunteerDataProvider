@@ -19,7 +19,7 @@ public class PersonRoleController {
 
 	@GetMapping("/{ID}")
 	public List<PersonRole> get(@PathVariable String ID) {
-		return personRoleRepository.findAll();
+		return personRoleRepository.findByPersonID(ID);
 	}
 
 }

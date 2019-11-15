@@ -17,6 +17,6 @@ public class PersonTaskController {
 
 	@GetMapping("/{ID}")
 	public List<PersonTask> getPersonTasks(@PathVariable String ID) {
-		return personTaskRepository.findAll();
+		return personTaskRepository.findByPersonID(ID);
 	}
 }

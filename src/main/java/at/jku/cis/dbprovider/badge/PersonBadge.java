@@ -1,7 +1,11 @@
 package at.jku.cis.dbprovider.badge;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Reference;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import at.jku.cis.dbprovider.person.Person;
 
 @Document
 public class PersonBadge {
@@ -14,6 +18,8 @@ public class PersonBadge {
 	private String badgeIcon;
 	private String iVolunteerUUID;
 	private String iVolunteerSource;
+	
+	private String personID;
 
 	public PersonBadge() {
 	}
@@ -72,6 +78,14 @@ public class PersonBadge {
 
 	public void setiVolunteerSource(String iVolunteerSource) {
 		this.iVolunteerSource = iVolunteerSource;
+	}
+
+	public String getPersonID() {
+		return personID;
+	}
+
+	public void setPersonID(String personID) {
+		this.personID = personID;
 	}
 
 }

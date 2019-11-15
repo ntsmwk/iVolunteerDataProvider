@@ -19,9 +19,9 @@ public class PersonTask {
 	private GeoInformation taskGeoInformation;
 	private String iVolunteerUUID;
 	private String iVolunteerSource;
+	private String personID;
 
 	public PersonTask() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public String getTaskID() {
@@ -118,6 +118,14 @@ public class PersonTask {
 
 	public void setiVolunteerSource(String iVolunteerSource) {
 		this.iVolunteerSource = iVolunteerSource;
+	}
+
+	public String getPersonID() {
+		return personID;
+	}
+
+	public void setPersonID(String personID) {
+		this.personID = personID;
 	}	
 
 }

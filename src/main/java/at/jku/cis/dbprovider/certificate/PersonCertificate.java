@@ -1,7 +1,10 @@
 package at.jku.cis.dbprovider.certificate;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import at.jku.cis.dbprovider.person.Person;
 
 @Document
 public class PersonCertificate {
@@ -16,6 +19,7 @@ public class PersonCertificate {
 	private String certificateIcon;
 	private String iVolunteerUUID;
 	private String iVolunteerSource;
+	private String personID;
 
 	public PersonCertificate() {
 	}
@@ -90,6 +94,14 @@ public class PersonCertificate {
 
 	public void setiVolunteerSource(String iVolunteerSource) {
 		this.iVolunteerSource = iVolunteerSource;
+	}
+
+	public String getPersonID() {
+		return personID;
+	}
+
+	public void setPersonID(String personID) {
+		this.personID = personID;
 	}
 
 }

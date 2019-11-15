@@ -17,7 +17,7 @@ public class PersonBadgeController {
 
 	@GetMapping("/{ID}")
 	public List<PersonBadge> get(@PathVariable String ID) {
-		return personBadgeRepository.findAll();
+		return personBadgeRepository.findByPersonID(ID);
 	}
 
 }
