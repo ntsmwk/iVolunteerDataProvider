@@ -1,15 +1,13 @@
 package at.jku.cis.dbprovider.certificate;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-import at.jku.cis.dbprovider.person.Person;
 
 @Document
 public class PersonCertificate {
 
 	@Id
+	private String id;
 	private String certificateID;
 	private String certificateString;
 	private String certificateName;

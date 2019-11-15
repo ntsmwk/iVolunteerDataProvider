@@ -1,14 +1,16 @@
 package at.jku.cis.dbprovider.task;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class GeoInformation {
 
 	private boolean enabled;
-	private double latitude;
-	private double longitude;
-	private double gridID;
+	private String latitude;
+	private String longitude;
+	private int gridID;
 
 	public GeoInformation() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public boolean isEnabled() {
@@ -19,27 +21,27 @@ public class GeoInformation {
 		this.enabled = enabled;
 	}
 
-	public double getLatitude() {
+	public String getLatitude() {
 		return latitude;
 	}
 
-	public void setLatitude(double latitude) {
+	public void setLatitude(String latitude) {
 		this.latitude = latitude;
 	}
 
-	public double getLongitude() {
+	public String getLongitude() {
 		return longitude;
 	}
 
-	public void setLongitude(double longitude) {
+	public void setLongitude(String longitude) {
 		this.longitude = longitude;
 	}
 
-	public double getGridID() {
+	public int getGridID() {
 		return gridID;
 	}
 
-	public void setGridID(double gridID) {
+	public void setGridID(int gridID) {
 		this.gridID = gridID;
 	}
 

@@ -7,6 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class PersonTask {
 
 	@Id
+	private String id;
 	private String taskID;
 	private String taskType1;
 	private String taskType2;
@@ -22,6 +23,25 @@ public class PersonTask {
 	private String personID;
 
 	public PersonTask() {
+	}
+
+	public PersonTask(String taskID, String taskType1, String taskType2, String taskName, String taskDescription,
+			String taskDateFrom, String taskDateTo, String taskDuration, String taskLocation,
+			GeoInformation taskGeoInformation, String iVolunteerUUID, String iVolunteerSource, String personID) {
+		super();
+		this.taskID = taskID;
+		this.taskType1 = taskType1;
+		this.taskType2 = taskType2;
+		this.taskName = taskName;
+		this.taskDescription = taskDescription;
+		this.taskDateFrom = taskDateFrom;
+		this.taskDateTo = taskDateTo;
+		this.taskDuration = taskDuration;
+		this.taskLocation = taskLocation;
+		this.taskGeoInformation = taskGeoInformation;
+		this.iVolunteerUUID = iVolunteerUUID;
+		this.iVolunteerSource = iVolunteerSource;
+		this.personID = personID;
 	}
 
 	public String getTaskID() {
@@ -126,6 +146,6 @@ public class PersonTask {
 
 	public void setPersonID(String personID) {
 		this.personID = personID;
-	}	
+	}
 
 }

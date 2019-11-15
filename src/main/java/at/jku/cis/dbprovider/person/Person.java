@@ -5,7 +5,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
 public class Person {
+	
+
 	@Id
+	private String id;
 	private String ID;
 
 	private String lastname;
@@ -22,7 +25,7 @@ public class Person {
 	public Person(String ID, String lastname, String firstname, String birthday, String photo,
 			ContactDetail[] contactDetails, String iVolunteerSource) {
 		super();
-		this.ID = ID;
+		this.setID(ID);
 		this.lastname = lastname;
 		this.firstname = firstname;
 		this.birthday = birthday;
@@ -77,6 +80,14 @@ public class Person {
 
 	public void setiVolunteerSource(String iVolunteerSource) {
 		this.iVolunteerSource = iVolunteerSource;
+	}
+
+	public String getID() {
+		return ID;
+	}
+
+	public void setID(String iD) {
+		ID = iD;
 	}
 
 }

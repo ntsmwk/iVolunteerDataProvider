@@ -15,6 +15,11 @@ public class PersonCertificateController {
 	@Autowired
 	private PersonCertificateRepository personCertificateRepository;
 
+	@GetMapping()
+	public List<PersonCertificate> getPersonCertificates() {
+		return personCertificateRepository.findAll();
+	}
+
 	@GetMapping("/{ID}")
 	public List<PersonCertificate> getPersonCertificates(@PathVariable String ID) {
 		return personCertificateRepository.findByPersonID(ID);

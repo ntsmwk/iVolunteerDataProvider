@@ -7,6 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class PersonRole {
 
 	@Id
+	private String id;
 	private String roleID;
 	private String roleType;
 	private String roleName;
@@ -17,7 +18,7 @@ public class PersonRole {
 	private String dateFrom;
 	private String dateTo;
 	private String iVolunteerSource;
-	
+
 	private String personID;
 
 	public PersonRole() {

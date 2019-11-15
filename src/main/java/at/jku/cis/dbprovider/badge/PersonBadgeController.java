@@ -15,6 +15,11 @@ public class PersonBadgeController {
 	@Autowired
 	private PersonBadgeRepository personBadgeRepository;
 
+	@GetMapping()
+	public List<PersonBadge> get() {
+		return personBadgeRepository.findAll();
+	}
+	
 	@GetMapping("/{ID}")
 	public List<PersonBadge> get(@PathVariable String ID) {
 		return personBadgeRepository.findByPersonID(ID);
