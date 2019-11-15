@@ -20,12 +20,4 @@ public class Application {
 		SpringApplication.run(Application.class, args);
 	}
 
-	@PostConstruct
-	public void init() {
-		double x = 48.39484786987305000000;
-		PersonTask task = new PersonTask("asdf", "asdf", "asdf", "asdf", "asdf", "asdf", "asdf", "asdf", "asdf",
-				new GeoInformation(), "asdf", "aasdf", "asdf");
-
-		personTaskRepository.save(task);
-	}
 }
